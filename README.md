@@ -33,14 +33,22 @@ cp scripts/* ~/bin/
 chmod +x ~/bin/*
 ```
 
-## Requirements
+## Requirements (Arch Linux)
 
-See `HYPERSETUP.md` for the full spec. Core dependencies:
+See `HYPERSETUP.md` for the full spec.
 
-- `hyprland` `hypridle` `hyprlock`
-- `waybar` `kitty` `rofi`
-- `wl-clipboard` `grim` `slurp`
-- `pipewire` `wireplumber` `playerctl`
-- `brightnessctl`
-- `xdg-desktop-portal-hyprland` `xdg-desktop-portal-gtk`
-- `ttf-jetbrains-mono-nerd` `noto-fonts-cjk` `otf-font-awesome` `noto-fonts-emoji`
+```bash
+sudo pacman -S --needed \
+  hyprland waybar kitty rofi \
+  wl-clipboard grim slurp \
+  pipewire wireplumber playerctl \
+  brightnessctl \
+  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
+  noto-fonts-cjk noto-fonts-emoji ttf-font-awesome
+```
+
+`hypridle` and `hyprlock` are bundled with `hyprland`.
+
+For the terminal font (JetBrains Mono Nerd Font), install one of:
+- `ttf-jetbrains-mono` (community, no Nerd icons)
+- `ttf-jetbrains-mono-nerd` (AUR, with Nerd icons)
