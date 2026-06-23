@@ -1,0 +1,151 @@
+* {
+    font-family: "JetBrains Mono", "Noto Sans CJK SC", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 2px solid rgba(100, 114, 125, 0.45);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    background-color: transparent;
+    color: #ffffff;
+    min-width: 16px;
+    min-height: 0;
+    font-family: "Noto Sans CJK SC", "JetBrains Mono", sans-serif;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#clock,
+#cpu,
+#custom-cpu_temp,
+#custom-disk_root,
+#custom-gpu,
+#custom-lan_ip,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 6px;
+    color: #ffffff;
+    min-height: 0;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+    min-height: 0;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+#memory {
+    background-color: #9b59b6;
+}
+
+#pulseaudio {
+    background-color: #f1c40f;
+    color: #000000;
+}
+
+#custom-lan_ip {
+    background-color: #16a085;
+    color: #ffffff;
+    min-width: 165px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-cpu_temp {
+    background-color: #27ae60;
+    color: #000000;
+    min-width: 118px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-gpu {
+    background-color: #d35400;
+    color: #ffffff;
+    min-width: 118px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#custom-disk_root {
+    background-color: #34495e;
+    color: #ffffff;
+    min-width: 82px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#memory {
+    background-color: #9b59b6;
+    min-width: 82px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#pulseaudio {
+    background-color: #f1c40f;
+    color: #000000;
+    min-width: 74px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#clock {
+    background-color: #64727D;
+    min-width: 128px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#tray {
+    min-height: 0;
+    padding: 0 4px;
+}

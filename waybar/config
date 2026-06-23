@@ -1,0 +1,71 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 22,
+    "spacing": 2,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/lan_ip", "pulseaudio", "custom/cpu_temp", "custom/gpu", "memory", "custom/disk_root", "clock", "tray"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        },
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "default": "〇"
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "memory": {
+        "format": "RAM {}%",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "custom/lan_ip": {
+        "exec": "~/bin/waybar-lan-ip.sh",
+        "interval": 15,
+        "tooltip": false
+    },
+    "custom/cpu_temp": {
+        "exec": "~/bin/waybar-cpu-temp.sh",
+        "interval": 5,
+        "tooltip": false
+    },
+    "custom/gpu": {
+        "exec": "~/bin/waybar-gpu.sh",
+        "interval": 5,
+        "tooltip": false
+    },
+    "custom/disk_root": {
+        "exec": "~/bin/waybar-disk-root.sh",
+        "interval": 30,
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 12,
+        "spacing": 4
+    }
+}
